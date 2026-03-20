@@ -42,3 +42,43 @@ function scrollCards(direction) {
         }
     }
 }
+
+
+
+// ==========================================
+// GESTION DU FORMULAIRE DE CONTACT
+// ==========================================
+const form = document.getElementById("contact-form");
+const successMessage = document.getElementById("success-message");
+
+// On vérifie que le formulaire existe sur la page avant d'agir
+if (form) {
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault(); // Empêche le rechargement de la page
+
+        const data = new FormData(event.target);
+
+        try {
+            const response = await fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+if (response.ok) {
+                successMessage.style.display = "block"; // Affiche le message
+                form.reset(); // Vide le formulaire
+
+                // NOUVEAU : Fait disparaître le message après 5 secondes
+                setTimeout(() => {
+                    successMessage.style.display = "none";
+                }, 5000);
+            } else {                alert("Oups ! Il y a eu un problème lors de l'envoi de votre message.");
+            }
+        } catch (error) {
+            alert("Oups ! Une erreur réseau est survenue.");
+        }
+    });
+}

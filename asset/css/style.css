@@ -98,19 +98,28 @@ p.text2 {
 
 /* FOMRULAIRE */
 form {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
+    max-width: 500px; /* Un peu plus large pour que le texte respire */
+    margin: 0 auto;   /* Force le centrage horizontal au milieu de la page */
+    padding: 30px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    background-color: #fcfcfc; /* Un fond très légèrement gris pour le détacher du blanc */
+}
+
+/* Centre le texte uniquement sur la page de contact */
+.page-contact main.container h1,
+.page-contact main.container p {
+    text-align: center;
 }
 
 input, textarea {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 12px;
+    margin: 8px 0 20px 0; /* Plus d'espace sous chaque champ pour aérer */
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box; /* CRUCIAL : empêche les champs de déborder sur la droite */
+    font-family: inherit;   /* Utilise la même police que le reste du site */
 }
 
 input[type="submit"] {
@@ -308,4 +317,23 @@ input[type="submit"]:hover {
 .social-links a {
     margin: 0 10px; /* Espace horizontal entre chaque lien social */
     font-weight: bold; /* Met les liens en gras */
+}
+
+/* Pour le formulaire */
+.success-msg {
+    /* Positionnement flottant en bas au centre */
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* S'assure que le message passe par-dessus le reste */
+
+    /* Style visuel */
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Ombre un peu plus prononcée */
 }
