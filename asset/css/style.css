@@ -337,3 +337,46 @@ input[type="submit"]:hover {
     font-weight: bold;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Ombre un peu plus prononcée */
 }
+
+/* ==========================================================================
+   PAGE À PROPOS - CV
+   ========================================================================== */
+
+main.container hr {
+    border: none;
+    height: 1px;               /* Une ligne très fine */
+    width: 100%;               /* Qui prend toute la largeur disponible */
+    background-color: #eaeaea; /* Un gris très clair et discret */
+    margin: 40px 0;            /* Garde un bel espace pour aérer */
+}
+
+
+.cv-container {
+    text-align: left; /* Centre le bouton */
+    margin-top: 30px;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #14589c; /* Ton bleu principal */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-download:hover {
+    background-color: #34495e;
+    transform: translateY(-2px);
+}
+
+.pdf-viewer iframe {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: #f8f9fa; /* Fond gris clair pendant le chargement */
+}
