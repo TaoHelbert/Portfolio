@@ -21,9 +21,11 @@ body.page-veille {
     background-color: #c8d7f0;
 }
 body.page-contact {
-    background-color: #cee6ba;
+    background-color: #cee6ba4c;
 }
-
+body.page-legales {
+    background-color: #ff620028;
+}
 
 /* Conteneur générique qui crée les marges sur les côtés */
 .container {
@@ -98,7 +100,7 @@ p.text2 {
 
 /* FOMRULAIRE */
 form {
-    max-width: 500px; /* Un peu plus large pour que le texte respire */
+    max-width: 325px; /* Un peu plus large pour que le texte respire */
     margin: 0 auto;   /* Force le centrage horizontal au milieu de la page */
     padding: 30px;
     border: 1px solid #ccc;
@@ -379,4 +381,39 @@ main.container hr {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     background-color: #f8f9fa; /* Fond gris clair pendant le chargement */
+}
+
+/* ==========================================================================
+   STYLE POUR LA CASE RGPD
+   ========================================================================== */
+.checkbox-rgpd {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Annulation stricte des règles globales (width 100%, padding, etc.) */
+.checkbox-rgpd input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+    padding: 0 !important;
+    margin: 2px 10px 0 0 !important; /* Marge à droite pour décoller le texte */
+    flex-shrink: 0; /* Interdit à la case de se déformer ou d'étirer le parent */
+    cursor: pointer;
+}
+
+.checkbox-rgpd label {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.checkbox-rgpd a {
+    color: #14589c; /* Ton bleu principal */
+    text-decoration: underline;
+}
+
+/* Annule le texte en gras pour les liens spécifiques du footer */
+.social-links a.fw-normal {
+    font-weight: normal;
 }
