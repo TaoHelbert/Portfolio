@@ -417,3 +417,217 @@ main.container hr {
 .social-links a.fw-normal {
     font-weight: normal;
 }
+
+/* ==========================================================================
+   STYLES SPÉCIFIQUES POUR LA PAGE VEILLE
+   ========================================================================== */
+
+/* Titre principal de la page */
+.page-veille main.container h1 {
+    color: #14589c; /* Rappel de la couleur de ton header */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Introduction text1 centré pour faire propre */
+.page-veille main.container p.text1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Styles des titres H2 (1.1, 1.2, 1.3) */
+.page-veille main.container h2 {
+    color: #2c3e50; /* Gris très foncé */
+    font-size: 32px;
+    border-bottom: 3px solid #14589c; /* Ligne de soulignement épaisse */
+    padding-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+/* Styles des sous-titres H3 (A, B) */
+.page-veille main.container h3 {
+    color: #14589c;
+    font-size: 24px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Petite flèche décorative pour les sous-titres H3 */
+.page-veille main.container h3::before {
+    content: "➢";
+    margin-right: 12px;
+    font-size: 22px;
+    color: #3498db; /* Bleu plus clair */
+}
+
+/* Transformer les listes en blocs design (style cartes) */
+.page-veille main.container ul.text2 {
+    list-style: none; /* On supprime les gros points noirs par défaut */
+    padding-left: 0;
+}
+
+.page-veille main.container ul.text2 li {
+    background-color: #f8f9fa; /* Fond gris très clair */
+    border-left: 5px solid #3498db; /* Bordure gauche colorée */
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 0 8px 8px 0; /* Arrondis à droite seulement */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Ombre légère */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Effet au survol des éléments de la liste */
+.page-veille main.container ul.text2 li:hover {
+    transform: translateX(8px); /* Décalage léger vers la droite */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Ombre plus forte */
+    background-color: #ffffff; /* Passe au blanc pur */
+}
+
+/* Met les mots clés (en gras) bien en évidence avec ta couleur principale */
+.page-veille main.container ul.text2 li strong {
+    color: #14589c;
+}
+
+/* Style spécifique pour les liens dans la partie "Mes sources" */
+.page-veille main.container ul.text2 a {
+    color: #14589c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.page-veille main.container ul.text2 a:hover {
+    color: #e67e22; /* Passe à un orange/doré au survol pour bien voir qu'on peut cliquer */
+    text-decoration: underline;
+}
+
+/* Ligne de séparation élégante */
+.page-veille main.container hr {
+    border: none;
+    height: 2px;
+    /* Un beau dégradé qui disparaît sur les bords */
+    background: linear-gradient(to right, transparent, #14589c, transparent); 
+    margin: 60px 0;
+}
+
+/* ==========================================================================
+   CARROUSEL DYNAMIQUE (SECTION 1.4) - VERSION COMPACTE
+   ========================================================================== */
+
+/* Centrer le texte d'intro */
+.text-center { text-align: ; margin-bottom: 25px; }
+
+/* Conteneur principal qui positionne les boutons */
+.carousel-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 40px auto; /* Marge inférieure réduite */
+    padding: 0 45px; /* Espace optimisé pour les boutons */
+}
+
+/* Zone d'affichage masquant ce qui dépasse */
+.carousel-viewport {
+    overflow: hidden;
+    border-radius: 8px; /* Arrondis plus légers pour un look pro */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Ombre plus douce */
+    background-color: #fff;
+    width: 100%;
+}
+
+/* Le ruban qui contient toutes les slides côte à côte */
+.carousel-wrapper {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    align-items: flex-start; /* NOUVEAU : Empêche les cartes de s'étirer verticalement */
+}
+
+/* Style de chaque Diapositive - VERSION SERRÉE */
+.carousel-slide.resource-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    /* --- CORRECTION MAJEURE : Padding réduit --- */
+    padding: 25px 30px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* --- CORRECTION MAJEURE : Alignement haut --- */
+    justify-content: flex-start; 
+    align-items: flex-start;
+    /* --- CORRECTION MAJEURE : Plus de hauteur minimale forcée --- */
+    height: auto; 
+}
+
+/* Ajustement des badges dans le carrousel */
+.carousel-slide .badge {
+    top: 20px;
+    right: 30px;
+    font-size: 11px; /* Badge légèrement plus discret */
+    padding: 4px 10px;
+}
+
+/* --- Boutons de Navigation (Plus discrets) --- */
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(20, 88, 156, 0.7);
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 12px 14px; /* Boutons plus petits */
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.carousel-nav-btn:hover {
+    background-color: rgba(20, 88, 156, 1);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-nav-btn.prev { left: 0; }
+.carousel-nav-btn.next { right: 0; }
+
+/* --- Points de Pagination (Dots) - VERSION RAPPROCHÉE --- */
+.carousel-dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Espace entre les points réduit */
+    /* --- CORRECTION MAJEURE : Marge supérieure très réduite --- */
+    margin-top: 10px; 
+    width: 100%;
+}
+
+.carousel-dot {
+    height: 10px; /* Points légèrement plus petits */
+    width: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-dot:hover { background-color: #999; }
+
+.carousel-dot.active {
+    background-color: #14589c;
+    transform: scale(1.2);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .carousel-container { padding: 0 5px; } /* Espace minimal mobile */
+    .carousel-slide.resource-card { padding: 20px 15px; }
+    .carousel-nav-btn { padding: 8px 10px; font-size: 16px; top: 40%; } /* Boutons encore plus petits sur mobile */
+    .carousel-slide h4 { font-size: 16px; margin-top: 30px; } /* Marge h4 pour pas coller au badge */
+}

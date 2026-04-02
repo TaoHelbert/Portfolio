@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -24,11 +25,115 @@
     </header>
 
     <main class="container">
-        <h1>Ma veille</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi esse libero soluta aut, cum voluptatibus odio, qui totam rerum expedita vero asperiores quidem vel nobis iusto culpa, eum commodi possimus.</p>
+        <h1>Ma veille technologique : Les fuites de données</h1>
+        <p class="text1">Dans le cadre de mon BTS SIO option SISR, j'ai choisi de concentrer ma veille technologique sur une problématique critique et de plus en plus présente sur ces dernières années : <strong>les fuites de données</strong>.</p>
+        
+        <p class="text2">Qu'elle provienne d'un Malware , d'une erreur de configuration d'un administrateur ou de la négligence d'un employé, la fuite de données expose des informations sensibles sur sur des espace publique ou sur le Dark Web. Voici une analyse de ses impacts et des moyens de s'en protéger.</p>
+
+        <hr>
+
+        <h2>1.1 Les impacts d'une fuite de données</h2>
+        
+        <h3>A. Conséquences pour l'entreprise</h3>
+        <ul class="text2">
+            <li><strong>Impact financier et juridique :</strong> Amendes lourdes de la CNIL en cas de non-respect du RGPD (jusqu'à 4% du chiffre d'affaires mondial) et perte de contrats.</li>
+            <li><strong>Atteinte à la réputation :</strong> Perte de confiance des clients et des partenaires commerciaux, dont les données ont été compromises.</li>
+            <li><strong>Vol de propriété intellectuelle :</strong> Fuite de codes sources, de brevets ou de stratégies commerciales au profit de concurrents.</li>
+            <li><strong>Paralysie opérationnelle :</strong> Souvent couplée à un Ransomware, la fuite peut s'accompagner d'un blocage total du système d'information.</li>
+        </ul>
+
+        <h3>B. Conséquences pour l'utilisateur / le particulier</h3>
+        <ul class="text2">
+            <li><strong>Usurpation d'identité :</strong> Utilisation de documents fuités (cartes d'identité, passeports) pour contracter des crédits ou commettre des fraudes.</li>
+            <li><strong>Attaques par Phishing ciblées :</strong> Les pirates utilisent les informations personnelles (nom, adresse, numéro de téléphone) pour rendre leurs e-mails d'hameçonnage beaucoup plus crédibles.</li>
+            <li><strong>Piratage de comptes en cascade :</strong> Si l'utilisateur réutilise le même mot de passe pour plusieurs services, une fuite sur un site anodin peut compromettre une grande partie des sites auquel la personne est inscrit, allant jusqu'a sa boîte mail principale ou même ses comptes bancaires.</li>
+            <li><strong>Revente des coordonées :</strong> Les données récupérées sont dans la très large majorité revendue a des tiers qui eux même alimenterons par exemple des centrales d'appel, c'est pour cette raison que les spams téléphoniques prolifèrent ces derniers temps.</li>
+        </ul>
+
+        <hr>
+
+        <h2>1.2 Comment s'en prémunir ?</h2>
+
+        <h3>A. Côté Entreprise</h3>
+        <ul class="text2">
+            <li><strong>Solutions DLP (Data Loss Prevention) :</strong> Déploiement d'outils pour surveiller et bloquer l'exfiltration de données (blocage des ports USB, filtrage des e-mails sortants contenant des données sensibles).</li>
+            <li><strong>Gestion des accès et principe du moindre privilège :</strong> S'assurer qu'un utilisateur n'a accès qu'aux données strictement nécessaires à son travail.</li>
+            <li><strong>Authentification forte (MFA) :</strong> Imposer l'authentification multifacteur pour tous les accès distants (VPN, Cloud) afin de neutraliser l'utilisation de mots de passe volés.</li>
+            <li><strong>Chiffrement des données :</strong> Chiffrer les disques durs et les bases de données pour rendre les fichiers inutilisables en cas de vol physique ou de copie non autorisée.</li>
+        </ul>
+
+        <h3>B. Côté Utilisateur</h3>
+        <ul class="text2">
+            <li><strong>Hygiène des mots de passe :</strong> Utiliser un gestionnaire de mots de passe (comme Bitwarden ou KeePassXC) pour générer des mots de passe uniques et complexes pour chaque site.</li>
+            <li><strong>Vigilance sur le partage des données :</strong> Ne donner aux sites web que les informations strictement nécessaires lors d'une inscription.</li>
+            <li><strong>Utilisation de coordonées factice :</strong> Une grande partie du temps, il n'est pas nécessaire de partagé ses réelles coordonnées. Il est par exemple possible de créer un mail destiné au spam, d'utiliser les points relais au lieu de son adresse, ou encore souscrire à une ligne mobile secondaire.</li>
+            <li><strong>Surveillance active :</strong> Utiliser des services dédiés pour vérifier régulièrement si son adresse e-mail apparaît dans une base de données piratée publique.</li>
+        </ul>
+
+        <hr>
+
+        <h2>1.3 Mes sources de veille</h2>
+
+        <h3>Sites de référence consultés</h3>
+        <ul class="text2">
+            <li><a href="https://www.cert.ssi.gouv.fr/" target="_blank"><strong>CERT-FR (ANSSI) :</strong></a> Pour les bulletins d'alerte officiels et les rapports de menaces en France.</li>
+            <li><a href="https://www.cnil.fr/" target="_blank"><strong>La CNIL :</strong></a> Pour la législation autour des données personnelles et les obligations de déclaration de failles.</li>
+            <li><a href="https://haveibeenpwned.com/" target="_blank"><strong>Have I Been Pwned :</strong></a> Outil de référence créé par Troy Hunt pour vérifier l'intégrité des bases de données utilisateurs.</li>
+            <li><a href="https://bonjourlafuite.eu.org/" target="_blank"><strong>BonjourlaFuite :</strong></a> Site répertoriant les fuites de donnée (pour la plupart national) sur une frise chronologique</li>
+        </ul>
+
+<hr>
+<!---------------------------------------------------------------------
+---------------------------Articles & Vidéo----------------------------
+---------------------------------------------------------------------->
+        <h2>1.4 Mes découvertes récentes (Articles & Vidéos)</h2>
+        <p class="text2 text-center">Voici une sélection de contenus pertinents analysés au cours de ma veille.</p>
+
+        <div class="carousel-container">
+            
+            <div class="carousel-viewport" id="carouselViewport">
+                <div class="carousel-wrapper" id="carouselWrapper">
+                    
+                    <div class="carousel-slide resource-card article">
+                        <span class="badge badge-article">Article/Vidéo</span>
+                        <h4>Titre article</h4>
+                        <p>Description</p>
+                        <a href="#" target="_blank" class="btn-resource">Lire l'article</a>
+                    </div>
+<!--
+                    <div class="carousel-slide resource-card video">
+                        <span class="badge badge-video">Vidéo</span>
+                        <h4>Comprendre le vol de session (Pass-the-Cookie)</h4>
+                        <p>Démonstration d'une attaque permettant de contourner la double authentification (MFA) pour exfiltrer des données.</p>
+                        <a href="#" target="_blank" class="btn-resource">Voir la vidéo</a>
+                    </div>
+
+                    <div class="carousel-slide resource-card article">
+                        <span class="badge badge-article">Article</span>
+                        <h4>Mettre en place une stratégie DLP</h4>
+                        <p>Tutoriel technique décortiquant les règles de base de la prévention contre la perte de données (Data Loss Prevention) en entreprise.</p>
+                        <a href="#" target="_blank" class="btn-resource">Lire l'article</a>
+                    </div>
+
+                    <div class="carousel-slide resource-card video">
+                        <span class="badge badge-video">Vidéo</span>
+                        <h4>Le marché des données sur le Dark Web</h4>
+                        <p>Une plongée dans les forums underground pour comprendre comment les données volées sont revendues par les cybercriminels.</p>
+                        <a href="#" target="_blank" class="btn-resource">Voir la vidéo</a>
+                    </div>
+-->
+                </div>
+            </div>
+
+            <button class="carousel-nav-btn prev" id="carouselPrevBtn" aria-label="Précédent">&#10094;</button>
+            <button class="carousel-nav-btn next" id="carouselNextBtn" aria-label="Suivant">&#10095;</button>
+
+            <div class="carousel-dots-container" id="carouselDots"></div>
+        </div>
     </main>
 
     <div id="footer-placeholder"></div>
+    <script src="asset/js/slide-veille.js"></script>
     <script src="asset/js/include.js"></script>
 
 </body>
