@@ -1,0 +1,20 @@
+# Bloquer les principaux bots d'entraînement d'IA
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Bloquer tous les autres bots de scraping connus
+User-agent: Scrapy
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+# Autoriser les moteurs de recherche classiques
+User-agent: *
+Allow: /
