@@ -9,13 +9,13 @@ body {
 }
 
 body.page-accueil {
-    background-color: #e9ecef;
+    background-color: #e7721f13;
 }
 body.page-a-propos {
-    background-color: #f0efc8;
+    background-color: #fff7001e;
 }
 body.page-projet {
-    background-color: #e8cae3;
+    background-color: #ff00d41f;
 }
 body.page-veille {
     background-color: #c8d7f0;
